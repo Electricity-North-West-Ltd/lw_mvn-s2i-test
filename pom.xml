@@ -14,7 +14,7 @@
 	<name>assets</name>
 	<description>Asset Location</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>17</java.version>
 		<spring-boot-admin.version>2.7.3</spring-boot-admin.version>
 	</properties>
 	<dependencies>
