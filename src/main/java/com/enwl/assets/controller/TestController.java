@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 public class TestController {
     @GetMapping("/test")
     public String test(HttpServletRequest request){
-        return "Test controller called from "+request.getRemoteAddr();
+        var headerIp = request.getHeader("X-FORWARDED-FOR");
+        var forwardedForStr = (headerIp == null)?"":", X-FORWARDED-FOR: "+headerIp;
+        return "Test controller called from "+request.getRemoteAddr()+forwardedForStr;
     }
 }
